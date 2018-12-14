@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+
+class Te{
+public:
+  int * array;
+  int  b[3] = {2,3,4};
+  void llenarA(){
+  array=b;
+
+  }
+
+  void printA(){
+  for (int i = 0; i< 3;i++){
+    cout<<*(array+i)<<" ";    
+    }
+  array[3]=56;
+  for (int i = 0; i< 4;i++){
+    cout<<*(array+i)<<" ";    
+    }
+  }
+};
+
+int main(){
+Te e;
+e.llenarA();
+e.printA();
+
+cout<<22<<endl;
+}
